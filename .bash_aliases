@@ -5,9 +5,10 @@ alias dog='cat'
 alias wtf='git blame'
 alias la='ls -lhA --group-directories-first -v'
 alias afk='xfce4-session-logout --logout && exit'
-alias routersploit='sudo rsf'
-alias force-remove='rm -fr'
 alias renew-macaddress='pls ip link set wlp3s0 down && pls macchanger -r wlp3s0 && pls ip link set wlp3s0 up'
+alias myipc='curl -s https://api.ipify.org | copy'
+alias copy='xclip -selection c'
+alias bat='bat -p --paging never --theme=base16'
 
 function cd {
 	    builtin cd "$@" && la
@@ -22,6 +23,3 @@ function myip {
 	echo -e "${WHITE}Public  IP: ${YELLOW}$PUIP${NC}"
 	echo -e "${WHITE}Private IP: ${YELLOW}$LOIP${NC}"
 }
-alias bat='bat -p --paging never --theme=base16'
-alias copy='xclip -selection c'
-alias myipc='curl -s https://api.ipify.org | copy'
