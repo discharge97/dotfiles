@@ -9,6 +9,15 @@ alias renew-macaddress='pls ip link set wlp3s0 down && pls macchanger -r wlp3s0 
 alias myipc='curl -s https://api.ipify.org | copy'
 alias copy='xclip -selection c'
 alias bat='bat -p --paging never --theme=base16'
+alias back='cd ..'
+alias brb='sudo shutdown -r now'
+alias bashreload="source ~/.bashrc && echo Bash config reloaded"
+alias vi='vim'
+alias ping='ping -c 5'
+alias ports='netstat -tulanp'
+alias mkcd='mkdir -p "$1"; cd "$1"'
+
+alias mkcd='function _blah(){ mkdir "$1" && cd "$1"; };_blah'
 
 function cd {
 	    builtin cd "$@" && la
