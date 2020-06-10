@@ -11,10 +11,10 @@ alias copy='xclip -selection c'
 alias bat='bat -p --paging never --theme=base16'
 alias back='cd ..'
 alias brb='sudo shutdown -r now'
-alias bashreload="source ~/.bashrc && echo Bash config reloaded"
+alias bashreload="source ~/.bashrc && echo Reloaded!"
 alias vi='vim'
 alias ping='ping -c 5'
-alias ports='netstat -tulanp'
+alias ports='sudo lsof -i -P -n | grep LISTEN'
 alias mkcd='mkdir -p "$1"; cd "$1"'
 
 alias mkcd='function _blah(){ mkdir "$1" && cd "$1"; };_blah'
