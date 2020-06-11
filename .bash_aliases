@@ -10,6 +10,7 @@ alias myipc='curl -s https://api.ipify.org | copy'
 alias copy='xclip -selection c'
 alias bat='bat -p --paging never --theme=base16'
 alias back='cd ..'
+alias ..='cd ..'
 alias brb='sudo shutdown -r now'
 alias bashreload="source ~/.bashrc && echo Reloaded!"
 alias vi='vim'
