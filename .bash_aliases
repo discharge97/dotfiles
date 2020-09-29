@@ -3,6 +3,9 @@ alias dirop='xdg-open .'
 alias pls='sudo'
 alias dog='cat'
 alias wtf='git blame'
+alias status='git status'
+alias commit='git commit'
+alias push='git push'
 alias la='ls -lhA --group-directories-first -v'
 alias afk='xfce4-session-logout --logout && exit'
 alias renew-macaddress='pls ip link set wlp3s0 down && pls macchanger -r wlp3s0 && pls ip link set wlp3s0 up'
@@ -14,10 +17,9 @@ alias ..='cd ..'
 alias brb='sudo shutdown -r now'
 alias bashreload="source ~/.bashrc && echo Reloaded!"
 alias vi='vim'
-alias ping='ping -c 5'
+alias ping5='ping -c 5'
 alias ports='sudo lsof -i -P -n | grep LISTEN'
 alias mkcd='mkdir -p "$1"; cd "$1"'
-
 alias mkcd='function _blah(){ mkdir "$1" && cd "$1"; };_blah'
 
 function cd {
