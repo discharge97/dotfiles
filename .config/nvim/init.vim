@@ -73,6 +73,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " trim whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+" open terminal in current directory
+nnoremap <leader>t :silent !env xfce4-terminal --drop-down &<CR>
+
 " Colorscheme -------------------------------------
 colorscheme one
 set background=dark
@@ -86,6 +89,14 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'        " disable file paths in tabline
 let g:airline#extensions#tabline#show_close_button = 0  " remove 'X' at the end of the tabline
 let g:airline#extensions#tabline#tab_nr_type = 1        " tab number
+
+" CTRLP configs
+"let g:ctrlp_custom_ignore = '\v[\/]\.(DS_Storegit|hg|svn|optimized|compiled|node_modules)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \}
+let g:ctrlp_working_path_mode = '0'
 
 " BINDINGS ---------------------------------------
 
@@ -179,6 +190,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Spellchecker -----------------------------------
 map <F6> :setlocal spell! spelllang=en<CR>
 map <F7> :setlocal spell! spelllang=sr@latin<CR>
+
+" Ctrlp --------------------------------------------
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " fzf --------------------------------------------
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
