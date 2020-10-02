@@ -25,6 +25,9 @@ alias ping5='ping -c 5'
 alias ports='sudo lsof -i -P -n | grep LISTEN'
 alias mkcd='mkdir -p "$1"; cd "$1"'
 alias mkcd='function _blah(){ mkdir "$1" && cd "$1"; };_blah'
+alias _downloads="cd ~/Downloads"
+alias _documents="cd ~/Documents"
+alias isum="cd ~/isum"
 
 function cd {
 	    builtin cd "$@" && la
