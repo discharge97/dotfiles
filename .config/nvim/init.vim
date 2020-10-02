@@ -8,6 +8,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'machakann/vim-highlightedyank'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
@@ -51,18 +52,6 @@ set updatetime=50
 set wildmenu
 syntax on
 
-
-" Copy to clipboard
-vnoremap  <leader>y   "+y
-nnoremap  <leader>Y   "+yg_
-nnoremap  <leader>y   "+y
-nnoremap  <leader>yy  "+yy
-
-" Paste from clipboard
-nnoremap <leader>p    "+p
-nnoremap <leader>P    "+P
-vnoremap <leader>p    "+p
-vnoremap <leader>P    "+P
 
 " Enable autocompletion --------------------------
 set wildmode=longest,list,full
@@ -199,8 +188,8 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 map <leader><leader> :Files<CR>
 map <C-F> :Rg<CR>
-"command! -bang -nargs=? -complete=dir Files
-    "\ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
+command! -bang -nargs=? -complete=dir Files
+	\ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
 
 " compiler
 "map <leader>c :w! \| !npile <c-r>%<CR>
