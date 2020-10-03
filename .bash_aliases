@@ -10,6 +10,7 @@ alias add='git add'
 alias fetch="git fetch"
 alias stash="git stash"
 alias pull='git pull'
+alias gls="git status"
 alias la='ls -lhA --group-directories-first -v'
 alias afk='xfce4-session-logout --logout && exit'
 alias renew-macaddress='pls ip link set wlp3s0 down && pls macchanger -r wlp3s0 && pls ip link set wlp3s0 up'
