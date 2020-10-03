@@ -1,13 +1,16 @@
-echo "Copying .bashrc"
-cp -u .bashrc ~/
+echo -e "                                     
+ ____  _         _                   
+|    \|_|___ ___| |_ ___ ___ ___ ___ 
+|  |  | |_ -|  _|   | .'|  _| . | -_|
+|____/|_|___|___|_|_|__,|_| |_  |___|
+                            |___|    "
+echo "#Personal dotfiles"
+printf "\n\n============ Updating dot files ============\n\n"
+cp -v -u .bashrc ~/
+cp -v -u .bash_aliases ~/
+cp -v -u -r .config ~/
+cp -v -u -r bin ~/
 
-echo "Copying .bash_aliases"
-cp -u .bash_aliases ~/
-
-echo "Copying .config file"
-cp -u -r .config ~/
-
-echo "Soursing bashrc"
+printf "\n\n#Sourcing bashrc: "
 source ~/.bashrc
-
-echo "Done!"
+printf "Done!\n\n"
