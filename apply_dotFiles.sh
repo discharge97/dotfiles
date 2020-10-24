@@ -7,7 +7,7 @@ echo -e "
 echo "#Personal dotfiles"
 printf "\n\n============ Updating dot files ============\n\n"
 cp -v -u .bashrc ~/
-cp -v -u .bash_aliases ~/
+cp -v -u .aliases ~/
 cp -v -u -r .config ~/
 cp -v -u -r bin ~/ & chmod +x ~/bin/gitCommitChecker.sh
 

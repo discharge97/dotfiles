@@ -104,8 +104,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
 
