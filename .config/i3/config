@@ -22,15 +22,15 @@ set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
-
-
+#client.focused          $bg     $fg     $fg  $bg       $bg
+#client.focused_inactive $bg     $bg     $fg  $bg       $bg
+#client.unfocused        $bg     $bg     $fg  $bg       $bg
+#client.urgent           $bg     $bg     $fg  $bg       $bg
+#client.placeholder      $bg     $bg     $fg  $bg       $bg
+#client.background       $bg
+client.focused_inactive #0d1010 #212121 $fg #0d1010 #063340                                                                            
+client.unfocused        #0d1010 #212121 $fg #424242 #063340                                                                            
+client.focused          $fg #cecece #000000 $fg $fg 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -55,7 +55,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 #new_window 1pixel
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -149,6 +149,14 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+assign [class="(?i)TelegramDesktop"] $ws9
+assign [class="(?i)discord"] $ws9
+assign [class="(?i)skype"] $ws9
+assign [class="(?i)viber"] $ws9
+
+# Open specific applications in floating mode
+for_window [class="weather_floating"] floating enable, resize set 1280 820, move position center
 
 # switch to workspace
 bindsym Mod4+1 workspace number $ws1
