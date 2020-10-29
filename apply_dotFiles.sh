@@ -9,7 +9,7 @@ printf "\n\n============ Updating dot files ============\n\n"
 cp -v -u .bashrc ~/
 cp -v -u .aliases ~/
 cp -v -u -r .config ~/
-cp -v -u -r bin ~/ & chmod +x ~/bin/gitCommitChecker.sh
+cp -v -u -r bin ~/ && find ~/bin -type f -exec chmod u+x {} \;
 
 printf "\n\n#Sourcing bashrc: "
 source ~/.bashrc
