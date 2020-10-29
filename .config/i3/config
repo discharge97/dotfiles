@@ -87,10 +87,10 @@ bindsym Mod4+$up focus up
 bindsym Mod4+$right focus right
 
 # alternatively, you can use the cursor keys:
-bindsym Mod4+Left focus left
-bindsym Mod4+Down focus down
-bindsym Mod4+Up focus up
-bindsym Mod4+Right focus right
+bindsym Mod4+Left focus left exec ~/bin/center-mouse.sh
+bindsym Mod4+Down focus down exec ~/bin/center-mouse.sh
+bindsym Mod4+Up focus up exec ~/bin/center-mouse.sh
+bindsym Mod4+Right focus right exec ~/bin/center-mouse.sh
 
 # move focused window
 bindsym Mod4+Shift+$left move left
@@ -137,6 +137,9 @@ bindsym Mod4+Shift+grave move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym Mod4+grave scratchpad show
 
+#Print screen keybind
+bindsym --release Print exec flameshot gui
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -156,7 +159,8 @@ assign [class="(?i)skype"] $ws9
 assign [class="(?i)viber"] $ws9
 
 # Open specific applications in floating mode
-for_window [class="weather_floating"] floating enable, resize set 1280 820, move position center
+#for_window [class='(?i)urxvt'] floating enable
+for_window [class="(?i)weather_floating"] floating enable, resize set 1280 820, move position center
 
 # switch to workspace
 bindsym Mod4+1 workspace number $ws1
@@ -221,6 +225,7 @@ bindsym Mod4+r mode "resize"
 bar {
 	position top
         status_command i3status
+        #status_command i3blocks
 	font pango:DejaVu Sans Mono 10
 }
 
