@@ -1,4 +1,4 @@
-#!/usr/bin/env /sh
+#!/bin/sh
 
 WIN=$(xdotool getwindowfocus getwindowgeometry --shell | grep -e X -e Y -e WIDTH -e HEIGHT | cut -d '=' -f2-)
 
