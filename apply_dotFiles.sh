@@ -6,7 +6,7 @@ echo -e "
                             |___|    "
 echo "#Personal dotfiles"
 printf "\n\n============ Updating dot files ============\n\n"
-cp -v -u .Xresources ~/
+cp -v -u .Xdefaults ~/
 cp -v -u .bashrc ~/
 cp -v -u .aliases ~/
 cp -v -u -r .config ~/
