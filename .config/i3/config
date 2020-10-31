@@ -28,9 +28,9 @@ set_from_resource $bg i3wm.color2 #f0f0f0
 #client.urgent           $bg     $bg     $fg  $bg       $bg
 #client.placeholder      $bg     $bg     $fg  $bg       $bg
 #client.background       $bg
-client.focused_inactive #0d1010 #212121 $fg #0d1010 #063340                                                                            
-client.unfocused        #0d1010 #212121 $fg #424242 #063340                                                                            
-client.focused          $fg #cecece #000000 $fg $fg 
+client.focused_inactive #0d1010 #212121 $fg #0d1010 #063340
+client.unfocused        #0d1010 #212121 $fg #424242 #063340
+client.focused          $fg #cecece #000000 $fg $fg
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -201,8 +201,8 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $left       resize shrink width 5 px or 5 ppt
-        bindsym $down       resize grow height 5 px or 5 ppt
+        bindsym $left       resize grow width 5 px or 5 ppt
+        bindsym $down       resize shrink height 5 px or 5 ppt
         bindsym $up         resize shrink height 5 px or 5 ppt
         bindsym $right      resize grow width 5 px or 5 ppt
 
@@ -219,6 +219,11 @@ mode "resize" {
 }
 
 bindsym Mod4+r mode "resize"
+
+# Named workspaces
+bindsym Mod4+Insert exec "~/bin/i3wss.sh"
+bindsym Mod4+Shift+Insert exec "~/bin/i3wss.sh move"
+bindsym Mod4+Control+Insert exec "~/bin/i3wss.sh move-switch"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
