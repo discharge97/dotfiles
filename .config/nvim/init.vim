@@ -23,8 +23,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 
-" Plug 'rakr/vim-one'
-Plug 'dylanaraps/wal.vim'
+Plug 'rakr/vim-one'
+" Plug 'dylanaraps/wal.vim'
 
 call plug#end()
 
@@ -69,8 +69,8 @@ autocmd BufWritePre * %s/\s\+$//e
 nnoremap <leader>t :silent !env xfce4-terminal --drop-down &<CR>
 
 " Colorscheme -------------------------------------
-" olorscheme one
-colorscheme wal
+colorscheme one
+" colorscheme wal
 set background=dark
 set termguicolors
 " darker background
@@ -188,12 +188,12 @@ map <F7> :setlocal spell! spelllang=sr@latin<CR>
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " fzf --------------------------------------------
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.85 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 map <leader><leader> :Files<CR>
 map <C-F> :Rg<CR>
 command! -bang -nargs=? -complete=dir Files
-	\ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
+			\ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
 
 " compiler
 "map <leader>c :w! \| !npile <c-r>%<CR>
