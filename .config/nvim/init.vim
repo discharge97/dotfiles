@@ -7,13 +7,14 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "Plug 'machakann/vim-highlightedyank'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
+Plug 'kien/ctrlp.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree' |
@@ -21,7 +22,9 @@ Plug 'preservim/nerdtree' |
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-Plug 'rakr/vim-one'
+
+" Plug 'rakr/vim-one'
+Plug 'dylanaraps/wal.vim'
 
 call plug#end()
 
@@ -66,7 +69,8 @@ autocmd BufWritePre * %s/\s\+$//e
 nnoremap <leader>t :silent !env xfce4-terminal --drop-down &<CR>
 
 " Colorscheme -------------------------------------
-colorscheme one
+" olorscheme one
+colorscheme wal
 set background=dark
 set termguicolors
 " darker background
