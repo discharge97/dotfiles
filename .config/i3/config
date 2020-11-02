@@ -114,12 +114,15 @@ bindsym Mod4+v split v
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
+#bindsym Mod4+s layout stacking
+bindsym Mod4+s layout tabbed
 bindsym Mod4+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod4+t floating toggle
+
+# Sycle throu active windows and center mouse on focus
+bindsym Mod4+Tab exec rofi -show && ~/bin/center-mouse.sh
 
 # change focus between tiling / floating windows
 #bindsym Mod4+space focus mode_toggle
@@ -224,6 +227,10 @@ bindsym Mod4+r mode "resize"
 bindsym Mod4+Insert exec "~/bin/i3wss.sh"
 bindsym Mod4+Shift+Insert exec "~/bin/i3wss.sh move"
 bindsym Mod4+Control+Insert exec "~/bin/i3wss.sh move-switch"
+
+bindsym Mod4+w exec firefox
+bindsym Mod4+m exec ranger
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
