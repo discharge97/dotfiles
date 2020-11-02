@@ -228,9 +228,12 @@ bindsym Mod4+Insert exec "~/bin/i3wss.sh"
 bindsym Mod4+Shift+Insert exec "~/bin/i3wss.sh move"
 bindsym Mod4+Control+Insert exec "~/bin/i3wss.sh move-switch"
 
-bindsym Mod4+w exec firefox
-bindsym Mod4+m exec terminal -e ranger
 
+# Keybinds for apps
+bindsym Mod4+w exec firefox
+bindsym Mod4+Shift+w exec "~/bin/search_web.sh"
+bindsym Mod4+Shift+y exec "~/bin/search_web.sh yt"
+bindsym Mod4+m exec terminal -e ranger
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -252,3 +255,5 @@ bar {
 # Please remove the following exec line:
 #######################################################################
 #exec i3-config-wizard
+
+
