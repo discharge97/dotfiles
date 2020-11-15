@@ -30,4 +30,4 @@ while getopts x:y:R:r:h flag
 	    esac
 	done
 
-ffmpeg -f x11grab -r $rate -s "$res" -i :0.0+"$x","$y" -vcodec rawvideo -vf hflip -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
+ffmpeg -f x11grab -r $rate -s "$res" -i :0.0+"$x","$y" -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
