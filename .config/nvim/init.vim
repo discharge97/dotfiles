@@ -9,7 +9,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'machakann/vim-highlightedyank'
+Plug 'machakann/vim-highlightedyank'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
