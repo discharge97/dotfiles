@@ -160,6 +160,7 @@ set $ws10 "10"
 
 assign [class="(?i)TelegramDesktop"] $ws9
 assign [class="(?i)discord"] $ws9
+assign [class="(?i)lightcord"] $ws9
 assign [class="(?i)skype"] $ws9
 assign [class="(?i)viber"] $ws9
 
@@ -236,6 +237,7 @@ bindsym Mod4+w exec firefox
 bindsym Mod4+Shift+w exec "~/bin/search_web.sh"
 bindsym Mod4+Shift+y exec "~/bin/search_web.sh yt"
 bindsym Mod4+m exec st -e ranger
+bindsym Mod4+period exec rofimoji
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
