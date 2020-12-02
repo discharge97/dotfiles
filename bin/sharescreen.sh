@@ -30,4 +30,5 @@ while getopts x:y:R:r:h flag
 	    esac
 	done
 
+sudo modprobe v4l2loopback
 ffmpeg -f x11grab -r $rate -s "$res" -i :0.0+"$x","$y" -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
