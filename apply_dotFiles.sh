@@ -10,6 +10,9 @@ cp -v -u .Xdefaults ~/
 cp -v -u .bashrc ~/
 cp -v -u .aliases ~/
 cp -v -u -r .config ~/
+cp -v -u -r .oh-my-zsh ~/
+cp -v -u -r .zshrc ~/
+cp -v -u -r .p10k.zsh ~/
 cp -v -u -r bin ~/ && find ~/bin -type f -exec chmod u+x {} \;
 
 printf "\n\n#Sourcing bashrc: "
