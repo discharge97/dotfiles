@@ -1,15 +1,11 @@
-#urxvt*font:             xft:Terminus:size=10
-urxvt*font:             xft:Hack Nerd Font Mono:style=Regular:size:9
+#st*font:             xft:FiraCode:style=Regular:size:12
 urxvt*termName:         rxvt
-urxvt*background:       #000000
 urxvt*foreground:       #cccccc
 urxvt*scrollBar:        false
 urxvt*perl-lib:         /usr/lib/urxvt/perl/
 urxvt*perl-ext-common:  default,matcher
 urxvt*urlLauncher:      /usr/bin/jumanji
 urxvt*matcher.button:   1
-#urxvt*fading:           50
-#urxvt*fadeColor:        #000000
 
 Xft*dpi:                96
 Xft*antialias:          true
@@ -19,8 +15,8 @@ urxvt*background:       rgba:0000/0000/0000/cccc
 
 URxvt.transparent:   true
 URxvt.tintColor:     white
-URxvt.shading:       20 
- 
+URxvt.shading:       20
+
 URxvt*color0:      #000000
 URxvt*color1:      #9e1828
 URxvt*color2:      #aece92
