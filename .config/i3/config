@@ -95,6 +95,9 @@ bindsym Mod4+Down focus down exec ~/bin/center-mouse.sh
 bindsym Mod4+Up focus up exec ~/bin/center-mouse.sh
 bindsym Mod4+Right focus right exec ~/bin/center-mouse.sh
 
+# custom, random keybinds
+bindsym Mod4+o exec ~/bin/project_browser.sh
+
 # move focused window
 bindsym Mod4+Shift+$left move left
 bindsym Mod4+Shift+$down move down
