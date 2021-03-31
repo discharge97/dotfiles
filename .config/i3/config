@@ -121,8 +121,8 @@ bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 #bindsym Mod4+s layout stacking
-bindsym Mod4+s layout tabbed
-bindsym Mod4+e layout toggle split
+#bindsym Mod4+s layout tabbed
+#bindsym Mod4+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod4+t floating toggle
@@ -171,7 +171,17 @@ assign [class="(?i)zoom"] $ws9
 
 # Open specific applications in floating mode
 #for_window [class='(?i)urxvt'] floating enable
-for_window [class="(?i)weather_floating"] floating enable, resize set 1280 820, move position center
+for_window [class="(?i)weather_floating"] floating enable, resize set 920 650, move position center
+for_window [class="(?i)sxiv"] fullscreen enable
+
+# for Maya, 3D modeling
+for_window [title="(?i)options"] floating enable, move position center
+for_window [title="(?i)settings"] floating enable, move position center
+for_window [title="(?i)shelf editor"] floating enable, move position center
+for_window [title="(?i)maya_script"] floating enable, move position center
+
+
+
 
 # switch to workspace
 bindsym Mod4+1 workspace number $ws1
