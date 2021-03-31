@@ -177,7 +177,7 @@ for_window [class="(?i)sxiv"] fullscreen enable
 # for Maya, 3D modeling
 for_window [title="(?i)options"] floating enable, move position center
 for_window [title="(?i)settings"] floating enable, move position center
-for_window [title="(?i)shelf editor"] floating enable, move position center
+for_window [title="(?i)editor"] floating enable, move position center
 for_window [title="(?i)maya_script"] floating enable, move position center
 
 
