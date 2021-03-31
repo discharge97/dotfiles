@@ -80,7 +80,7 @@ bindsym Mod4+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym Mod4+d exec --no-startup-id i3-dmenu-desktop
-bindsym Mod4+d exec --no-startup-id rofi -modi drun -show drun -show-icons
+bindsym Mod4+d exec --no-startup-id rofi -modi drun -s]how drun -show-icons
 bindsym Mod4+Shift+d exec dmenu_run
 
 # change focus
@@ -248,11 +248,13 @@ bindsym Mod4+Control+Insert exec "~/bin/i3wss.sh move-switch"
 
 
 # Keybinds for apps
-bindsym Mod4+w exec firefox
-bindsym Mod4+Shift+w exec "~/bin/search_web.sh"
+bindsym Mod4+w exec firefox && exec "~/bin/center-mouse.sh"
+bindsym Mod4+Shift+g exec "~/bin/search_web.sh"
 bindsym Mod4+Shift+y exec "~/bin/search_web.sh yt"
-bindsym Mod4+m exec st -e ranger
+bindsym Mod4+m exec -e ranger
 bindsym Mod4+period exec rofimoji
+bindsym Mod4+ exec rofimoji
+bindsym Mod4+Shift+w exec "~/bin/show_weather.sh"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
