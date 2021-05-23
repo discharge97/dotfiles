@@ -15,7 +15,7 @@ font pango:monospace 9
 
 exec_always "setxkbmap -model pc104 -layout us,rs -variant ,latinyz, -option grp:alt_shift_toggle"
 
-#smart_gaps on
+smart_gaps on
 gaps inner 10
 gaps outer 10
 
@@ -253,8 +253,9 @@ bindsym Mod4+Shift+g exec "~/bin/search_web.sh"
 bindsym Mod4+Shift+y exec "~/bin/search_web.sh yt"
 bindsym Mod4+m exec -e ranger
 bindsym Mod4+period exec rofimoji
-bindsym Mod4+ exec rofimoji
 bindsym Mod4+Shift+w exec "~/bin/show_weather.sh"
+bindsym Mod4+z exec "~/Documents/tmp_scripts/zoom_lectures.sh"
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
