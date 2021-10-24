@@ -3,7 +3,6 @@ alias dirop='xdg-open .'
 alias pls='sudo'
 alias dog='cat'
 alias wtf='git blame'
-alias status='git status'
 alias commit='git commit'
 alias push='git push'
 alias add='git add'
@@ -11,6 +10,8 @@ alias fetch="git fetch"
 alias stash="git stash"
 alias pull='git pull'
 alias clone='git clone'
+alias clone='git clone'
+alias restore='git restore'
 alias gls="git status"
 alias la='ls -lhA --group-directories-first -v'
 alias ls='ls --color=auto -lph --group-directories-first'
