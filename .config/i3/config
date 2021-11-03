@@ -243,7 +243,7 @@ bindsym Mod4+Control+Insert exec "~/bin/i3wss.sh move-switch"
 bindsym Mod4+w exec firefox && exec "~/bin/center-mouse.sh"
 bindsym Mod4+Shift+g exec "~/bin/search_web.sh"
 bindsym Mod4+Shift+y exec "~/bin/search_web.sh yt"
-bindsym Mod4+m exec -e ranger
+bindsym Mod4+m exec st -e ranger
 bindsym Mod4+period exec rofimoji
 bindsym Mod4+Shift+w exec "~/bin/show_weather.sh"
 bindsym Mod4+z exec "~/Documents/tmp_scripts/zoom_lectures.sh"
