@@ -34,6 +34,12 @@ alias _pictures="cd ~/Pictures"
 alias _code="cd ~/code"
 alias fonts="fc-list"
 
+alias drm="docker rm"
+alias drun="docker run"
+alias dpull="docker pull"
+alias drmi="docker rmi"
+alias dls="docker ps -a"
+
 function cd {
 	    builtin cd "$@" && la
     }
