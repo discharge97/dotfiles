@@ -33,6 +33,7 @@ alias _documents="cd ~/Documents"
 alias _pictures="cd ~/Pictures"
 alias _code="cd ~/code"
 alias fonts="fc-list"
+alias kernel-install="sudo mhwd-kernel --install"
 
 alias drm="docker rm"
 alias drun="docker run"
